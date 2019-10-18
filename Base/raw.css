@@ -9,12 +9,26 @@
     --bgrepeat: no-repeat; /* To make the background not repeat, use "no-repeat". To make background repeat, use "repeat", changing bgscale might need to be adjusted */
 
     /* Accent Colors */
-    --accentcolor: #7289da    !important;   /* To reset the color back to default, use #7289da */
+    --accentcolor: rgba(10,10,10,1) !important;   /* To reset the color back to default, use #7289da */
     --accenttext: white !important; /* Use this to change the text colors that are on top of the accentcolor, this is to help make text readable if you're using a bright accent color */
 
     /* Scrollbars */
-    --colorbar: white !important; /* Change the color of the scrollbar */
-    --widthbar: 14px !important; /* Change the width of the scrollbar */
+    --barcolor: white !important; /* Change the color of the scrollbar */
+    --barwidth: 14px !important; /* Change the width of the scrollbar */
+
+    /* Channel Colors */
+    --category: #b9bbbe; /* Discord Default #b9bbbe */
+    --categoryhover: #b9bbbe !important; /* Discord Default #b9bbbe */
+    --categoryselected: #fff; /* Discord Default #fff */
+    --channel: #b9bbbe !important; /* Discord Default #b9bbbe */
+    --channelhover: #b9bbbe; /* Discord Default #b9bbbe */
+    --channelselected: #fff !important; /* Discord Default #fff */
+    --channelunread: #fff !important; /* Discord Default #fff */
+    --channelmute: rgba(185,187,190,.6) !important; /* Discord Default rgba(185,187,190,.9) */
+
+    /* Custom Wordmark*/
+    --wordMark: 'Serenity UI';
+    --version: ' 1.0.0';
 
     /* - */
     --br: 7px;
@@ -25,13 +39,13 @@
 .theme-dark {
     --text-normal: white;
     --text-muted: white;
-    --text-link: var(--accentcolor);
+    --text-link: #7289da;
     --channels-default: white;
 }
 .theme-light {
     --text-normal: black;
     --text-muted: black;
-    --text-link: var(--accentcolor);
+    --text-link: #7289da;
     --channels-default: black;
     --interactive-muted: rgba(0, 0, 0, 0.50);
 }
@@ -126,6 +140,18 @@ svg.circleIcon-LvPL6c {
 .guildSeparator-3s64Iy {
     display: none;
 }
+/* Scroller */
+.wrapper-1Rf91z {
+    width: 72px;
+}
+.wrapper-1Rf91z ::-webkit-scrollbar-thumb {
+    visibility:hidden;
+    background-color: var(--barcolor);
+}
+.wrapper-1Rf91z:hover ::-webkit-scrollbar-thumb {
+    visibility:visible;
+    background-color: var(--barcolor);
+}
 /** Channel Sidebar **/
 /* Background */
 .container-PNkimc {
@@ -149,7 +175,7 @@ svg.circleIcon-LvPL6c {
 .menu-Sp6bN1 {
     border-radius: var(--br);
     box-shadow: none;
-    background: var(--bg-element);
+    background: var(--accentcolor);
 }
 .separator-2zcjq8 {
     border-bottom: none;
@@ -171,6 +197,16 @@ div#powercord-spotify-modal {
 button.button-14-BFJ.enabled-2cQ-u7.button-38aScr.lookBlank-3eh9lL.colorBrand-3pXr91.grow-q77ONN {
     border-radius: var(--br);
 }
+/* Category Name */
+.name-IbjUBS {
+	color: var(--categoryselected) !important;
+}
+.collapsed-4WdoJ7 .name-IbjUBS:hover {
+	color: var(--categoryhover) !important;
+}
+.collapsed-4WdoJ7 .name-IbjUBS {
+	color: var(--category) !important;
+}
 /* Channels */
 .modeSelected-1zApJ_ .content-3at_AU, .modeSelected-1zApJ_:hover .content-3at_AU {
     background-color: var(--bg-element);
@@ -179,14 +215,22 @@ button.button-14-BFJ.enabled-2cQ-u7.button-38aScr.lookBlank-3eh9lL.colorBrand-3p
 .children-Bmpf2Q {
     display: none;
 }
-svg.icon-1_QxNX {
-    display: none;
+.modeUnread-1zpFdA .name-3_Dsmg {
+	color: var(--channelunread) !important;
+}
+.modeMuted-3osy7j .name-3_Dsmg {
+	color: var(--channelmute) !important;
+}
+.modeSelected-1zApJ_ .name-3_Dsmg {
+	color: var(--channelselected) !important;
 }
 .name-3_Dsmg:hover {
+    color: var(--channelhover);
     margin-left: 10px;
     transition: margin-left 0.3s;
 }
 .name-3_Dsmg {
+    color: var(--channel) !important;
     padding: 6px 0px;
     margin-left: 0px;
     transition: margin-left 0.3s;
@@ -195,6 +239,32 @@ svg.icon-1_QxNX {
     width: 8px;
     border-radius: 100%;
     left: 211px;
+}
+.scrollerThemed-2oenus.themeDark-2cjlUp .scroller-2FKFPG::-webkit-scrollbar-thumb, .theme-dark .scrollerWrap-2lJEkd .scroller-2FKFPG::-webkit-scrollbar-thumb, .theme-light .scrollerThemed-2oenus.themeDark-2cjlUp .scroller-2FKFPG::-webkit-scrollbar-thumb {
+    background-color: white !important;
+}
+/* Icons */
+.icon-1_QxNX {
+	color: var(--channel) !important;
+	opacity: 1;
+}
+.modeSelected-1zApJ_ .icon-1_QxNX {
+	color: var(--channelselected) !important;
+	opacity: 1;
+	margin-left: 0px;
+}
+.icon-1_QxNX:hover {
+	color: var(--channelhover);
+	opacity: 1;
+	margin-left: 0px;
+}
+.modeUnread-1zpFdA .icon-1_QxNX {
+	color: rgba(255, 255, 255, 1) !important;
+	margin-left: 0px;
+}
+.modeMuted-3osy7j .icon-1_QxNX {
+	color: var(--channelmute) !important;
+	margin-left: 0px;
 }
 /* - Chat  - */
 /* Background */
@@ -238,14 +308,171 @@ span.dividerContent-2L12VI {
 .attachButtonDivider-3Glu60 {
     display: none;
 }
+.scrollbarGhostHairline-1mSOM1::-webkit-scrollbar-thumb {
+    background-color: var(--barcolor);
+}
+/* Dark themed emoji picker */
+.emojiPicker-3m1S-j, .category-2U57w6{
+    background-color: #23272A;
+}
+.searchBar-2pWH0_ {
+    background-color: rgb(29, 31, 32);
+}
+.searchBar-2pWH0_ .input-1Rv96N {
+    color: #b9bbbe;
+}
+.emojiPicker-3m1S-j .scroller-3vODG7 .emojiItem-109bjA.selected-39BZ4S {
+    background-color: rgb(53, 58, 61);
+}
+.categories-1feg4n {
+    background-color: rgb(29, 31, 32);
+    color: rgb(29, 31, 32);
+    padding-left: 12px;
+    padding-right: 12px;
+    margin: 0px !important;
+}
+.categories-1feg4n > .item-16cXuq:not(.selected-39BZ4S):not(:hover) {
+    filter: invert(0.88);
+}
+.emojiPicker-3m1S-j .scrollerThemed-2oenus.themeLight-1_DWyY .scroller-2FKFPG::-webkit-scrollbar-thumb,.theme-dark .scrollerThemed-2oenus.themeLight-1_DWyY .scroller-2FKFPG::-webkit-scrollbar-thumb,.theme-light .scrollerWrap-2lJEkd .scroller-2FKFPG::-webkit-scrollbar-thumb {
+    background-color: #202225;
+}
+.emojiPicker-3m1S-j .scrollerThemed-2oenus.themeLight-1_DWyY.scrollerTrack-1ZIpsv>.scroller-2FKFPG::-webkit-scrollbar-track,.theme-dark .scrollerThemed-2oenus.themeLight-1_DWyY.scrollerTrack-1ZIpsv>.scroller-2FKFPG::-webkit-scrollbar-track,.theme-light .scrollerWrap-2lJEkd.scrollerTrack-1ZIpsv>.scroller-2FKFPG::-webkit-scrollbar-track {
+    background-color: #2e3338
+}
+.diversitySelector-tmmMv0 .popout-2nUePc {
+    background-color: #313335;
+    border-color: #313335;
+}
+.sadImage-2ph8SI {
+    filter: invert(0.8) saturate(0) contrast(1.20)
+}
 /* Upload Menu */
-.attachPopout-1n-ZKM {
-    border-radius: var(--br);
-    background-color: transparent;
+/* Comment */
+.channelTextArea-1LDbYG.pc-channelTextArea.channelTextAreaUpload-3t7EIx.pc-channelTextAreaUpload.marginTop8-1DLZ1n.pc-marginTop8 {
+    WIDTH: 73%;
+    margin-left: 125px;
 }
-.noArrow-2foL9g.noShadow-3pu20z.popout-2iWAc-.popoutTopLeft-3B0mFf.arrowAlignmentTop-1yftWI {
-    background-color: var(--bg-element);
+.channelTextArea-1LDbYG.da-channelTextArea.channelTextAreaUpload-3t7EIx.da-channelTextAreaUpload.marginTop8-1DLZ1n.da-marginTop8 {
+    WIDTH: 73%;
+    margin-left: 125px;
 }
+/* Make Spoiler */
+.box-mmYMsp {
+    border-radius: 50px;
+}
+/* Backgrounds and Borders */
+.uploadModal-2ifh8j {
+   background-color: transparent;
+}
+.uploadModal-2ifh8j .inner-3nWsbo {
+    border: 2px dashed rgba(170, 184, 232, 0);
+}
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo {
+    border: 2px dashed hsla(0, 0%, 100%, 0);
+}
+/* Upload is too big */
+.uploadModalIn-1z07Bv .uploadDropModal-2kTwbc .inner-3nWsbo .icons-1w691d {
+    height: 20px;
+}
+/* Video File */
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.video-27RLEH {
+    background-image: url(/assets/dae57381bd2599b546fc014a41708c06.svg);
+    background-color: var(--accentcolor);
+    padding: 137px;
+    width: 446px;
+    margin-left: -12px;
+    border-radius: 8px 8px 0px 0px;
+}
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.webcode-22GGLX {
+    background-color: var(--accentcolor);
+    padding: 137px;
+    width: 446px;
+    margin-left: -12px;
+    border-radius: 8px 8px 0px 0px;
+}
+/* File */
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.unknown-3TPTMr {
+    background-image: url(/assets/92fc72e47a5854ae12c1167e69573d77.svg);
+    background-color: #5b6dae;
+    padding: 137px;
+    width: 446px;
+    margin-left: -12px;
+    border-radius: 8px 8px 0px 0px;
+}
+  
+/* Document */
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.document-2cvI0u {
+    background-image: url(/assets/a4ef7d20760cef4c165825770fd12ac7.svg);
+    background-color: var(--accentcolor);
+    padding: 137px;
+    width: 446px;
+    margin-left: -12px;
+    border-radius: 8px 8px 0px 0px;
+}
+/* ZIP */
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.archive-2hqXug {
+    background-image: url(/assets/3408a4597fdee6f7edef69f7fb487b38.svg);
+    background-color: var(--accentcolor);
+    padding: 137px;
+    width: 446px;
+    margin-left: -12px;
+    border-radius: 8px 8px 0px 0px;
+}
+/* Size of Modal */
+.uploadModal-2ifh8j {
+    min-height: 428px;
+    width: 720px;
+}
+/* Image */
+.uploadModal-2ifh8j .inner-3nWsbo .file-34mY5K .icon-kyxXVr.image-2yrs5j {
+    background-color: var(--accentcolor);
+    border: 2px solid var(--accentcolor);
+    border-radius: 8px 8px 0px 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0);
+    position: relative;
+    bottom: 12px;
+    height: 407px;
+    margin-left: -12px;
+    width: 720px;
+    background-size: contain;
+}
+/* Comment Box */
+.uploadModal-2ifh8j .inner-3nWsbo .comment-4IWttf {
+    margin: 0 18px;
+    margin-top: 243px; /* 243 */
+    margin-bottom: -83px; /* -107 */
+    margin-right: 160px;
+}
+.label-3aiqT2.pc-label {
+    color: transparent;
+}
+.uploadModal-2ifh8j .inner-3nWsbo .comment-4IWttf .label-3aiqT2 .optional--ezibr {
+    opacity: 0;
+}
+.uploadModal-2ifh8j {
+    background-color: var(--accentcolor);
+}
+/*  Buttons */
+.uploadModal-2ifh8j .footer-3mqk7D .button-primary {
+    border-radius: 50px;
+}
+.uploadModal-2ifh8j .footer-3mqk7D {
+    background-color: var(--accentcolor);
+}
+.lookInverted-2D7oAl.colorBrand-3pXr91 {
+    color: var(--accentcolor);
+    background-color: var(--accenttext);
+}
+.lookInverted-2D7oAl.colorBrand-3pXr91:hover {
+    color: var(--accentcolor);
+    background-color: var(--accenttext);
+}  
+  /* Scroll Bar */
+  .scrollbarGhostHairline-1mSOM1::-webkit-scrollbar-thumb {
+    background-color: white;
+    border: none;
+  }
 /* Header */
 .children-19S4PO:after {
     display: none;
@@ -384,9 +611,14 @@ a.anchor-3Z-8Bb.anchorUnderlineOnHover-2ESHQB {
 }
 /* Scrollbar */
 .theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG::-webkit-scrollbar-thumb {
-    background-color: var(--colorbar);
-    border-color: transparent;
+    background-color: var(--barcolor);
+    visibility:hidden;
 }
+.theme-dark .scrollerThemed-2oenus.themedWithTrack-q8E3vB .scroller-2FKFPG:hover::-webkit-scrollbar-thumb {
+    background-color: var(--barcolor);
+    visibility:visible;
+}
+
 /* Spoiler */
 .theme-dark .spoilerWarning-2aAZq1 {
     color: white;
@@ -464,7 +696,7 @@ a.anchor-3Z-8Bb.anchorUnderlineOnHover-2ESHQB {
 /* Background */
 .contextMenu-HLZMGh {
     border-radius: var(--br) !important;
-    background-color: var(--bg-element);
+    background-color: var(--accentcolor);
     box-shadow: none;
 }
 /* Seperators */
@@ -1085,7 +1317,7 @@ button.button-38qaLQ.button-38aScr.lookGhost-2Fn_0-.colorGrey-2DXtkV.sizeMin-1mJ
 /* Background */
 .userPopout-3XzG_A {
     box-shadow: none;
-    background-color: var(--bg-element);
+    background-color: var(--accentcolor);
     border-radius: var(--br);
 }
 .topSectionNormal-2-vo2m {
@@ -1124,7 +1356,12 @@ button.button-38qaLQ.button-38aScr.lookGhost-2Fn_0-.colorGrey-2DXtkV.sizeMin-1mJ
 .body-3ND3kc {
     background-color: rgb(46, 46, 46);
 }
-/* Headers */
+.activityPanel-28dQGo {
+    border-color: transparent;
+}
+.container-1giJp5 {
+    border-color: transparent;
+}
 .tabBarContainer-1s1u-z {
     border-top: none;
     padding-left: 20px;
@@ -1181,6 +1418,22 @@ button.button-38qaLQ.button-38aScr.lookGhost-2Fn_0-.colorGrey-2DXtkV.sizeMin-1mJ
 }
 .theme-light .contextMenu-HLZMGh {
     background-color: var(--bg-element-light);
+}
+/* CUSTOM WORDMARK*/
+.wordmark-2iDDfm::before {
+    content: var(--wordMark);
+    color: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    font-weight: 600;
+}
+.wordmark-2iDDfm::after {
+    content: var(--version);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    font-weight: 400;
+}
+.wordmark-2iDDfm svg {
+    display: none;
 }
 
 
