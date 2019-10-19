@@ -1,5 +1,9 @@
 :root {
-    /* Background */
+    /* Accent Colors */
+    --accentcolor: rgba(44,47,51,1) !important;   /* To reset the color back to default, use #7289da */
+    --accenttext: white !important; /* Use this to change the text colors that are on top of the accentcolor, this is to help make text readable if you're using a bright accent color */
+
+    /* Background Settings */
     --custombackground: url(https://cdn.discordapp.com/attachments/634555966234296321/634556080571023423/mikael-gustafsson-wallpaper-mikael-gustafsson.png); /* Change the background */
     --blur: 0px !important; /* Adjust the amount of blur on the background */
     --opacitybg: 0.3 !important; /* Change the transparency of the background. This is what controls the black overlay that is over the background */
@@ -8,15 +12,11 @@
     --bgrotation: 0deg; /* This option works out for some backgrounds, just in case. */
     --bgrepeat: no-repeat; /* To make the background not repeat, use "no-repeat". To make background repeat, use "repeat", changing bgscale might need to be adjusted */
 
-    /* Accent Colors */
-    --accentcolor: rgba(10,10,10,1) !important;   /* To reset the color back to default, use #7289da */
-    --accenttext: white !important; /* Use this to change the text colors that are on top of the accentcolor, this is to help make text readable if you're using a bright accent color */
+    /* Guild Settings */
+    --foldericon: url();
+    --foldercolor: rgba(44,47,51,1) !important;
 
-    /* Scrollbars */
-    --barcolor: white !important; /* Change the color of the scrollbar */
-    --barwidth: 14px !important; /* Change the width of the scrollbar */
-
-    /* Channel Colors */
+    /* Channel Settings */
     --category: #b9bbbe; /* Discord Default #b9bbbe */
     --categoryhover: #b9bbbe !important; /* Discord Default #b9bbbe */
     --categoryselected: #fff; /* Discord Default #fff */
@@ -26,9 +26,17 @@
     --channelunread: #fff !important; /* Discord Default #fff */
     --channelmute: rgba(185,187,190,.6) !important; /* Discord Default rgba(185,187,190,.9) */
 
+    /* Chat Settings */
+
+    /* Member Settings */
+
+    /* Scrollbar Settings */
+    --barcolor: white !important; /* Change the color of the scrollbar */
+    --barwidth: 14px !important; /* Change the width of the scrollbar */
+
     /* Custom Wordmark*/
     --wordMark: 'Serenity UI';
-    --version: ' 1.0.0';
+    --version: ' 1.0.1';
 
     /* - */
     --br: 7px;
@@ -96,11 +104,12 @@
 }
 /* Home Icon */
 .homeIcon-tEMBK1[name="Nova_Discord"] {
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/13/Discord_color_D.svg);
+    background-image: url(https://cdn.discordapp.com/attachments/554081814847684638/608509736073035798/pngkey.com-discord-png-200938.png);
     content: "";
+    background-color: var(--accentcolor);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 17px;
+    background-size: 24px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -109,7 +118,10 @@
 }
 /* Server Folders */
 .expandedFolderBackground-2sPsd- {
-    background-color: var(--bg-element);
+    background-color: var(--foldercolor);
+}
+.closedFolderIconWrapper-15K9MK {
+    background-color: var(--foldercolor);
 }
 .folder-21wGz3 {
     background-color: transparent;
@@ -165,7 +177,7 @@ svg.circleIcon-LvPL6c {
 }
 /* Top */
 .header-2o-2hj {
-    height: 58px;
+
     box-shadow: none;
 }
 .clickable-2ap7je .header-2o-2hj:hover, .selected-WP3kCM .header-2o-2hj {
@@ -188,9 +200,7 @@ svg.circleIcon-LvPL6c {
     margin-left: 30px;
 }
 /* Bottom */
-.container-3baos1 {
-    height: 100px;
-}
+
 div#powercord-spotify-modal {
     height: 52px;
 }
@@ -274,9 +284,18 @@ button.button-14-BFJ.enabled-2cQ-u7.button-38aScr.lookBlank-3eh9lL.colorBrand-3p
 .messages-3amgkR {
     background-color: transparent;
 }
-
 .chat-3bRxxu {
     background: transparent;
+}
+/* Bad Code */
+.vertical-V37hAW {
+    height: 52px;
+}
+.note-1V3kyJ {
+    transform: translateY(17px);
+}
+.channelTextArea-rNsIhG {
+    transform: translateY(-17px);
 }
 /* Stupid Lines */
 .dividerEnabled-2TTlcf {
@@ -310,6 +329,10 @@ span.dividerContent-2L12VI {
 }
 .scrollbarGhostHairline-1mSOM1::-webkit-scrollbar-thumb {
     background-color: var(--barcolor);
+}
+/* Bottem */
+/*.form-2fGMdU {
+    transform: translateY(25px);
 }
 /* Dark themed emoji picker */
 .emojiPicker-3m1S-j, .category-2U57w6{
