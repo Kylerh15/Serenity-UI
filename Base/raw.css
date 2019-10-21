@@ -1,20 +1,26 @@
 :root {
-    /* Accent Colors */
-    --accentcolor: rgba(44,47,51,1) !important;   /* To reset the color back to default, use #7289da */
+    /* Theme Settings */
+    --font: ; /* Coming Soon! */
+    --primarycolor: ; /* Coming Soon! */
+    --secondarycolor: ; /* Coming Soon! */
+    --accentcolor: rgba(44,47,51,1) !important; /* To reset the color back to default, use #7289da */
     --accenttext: white !important; /* Use this to change the text colors that are on top of the accentcolor, this is to help make text readable if you're using a bright accent color */
 
     /* Background Settings */
     --custombackground: url(https://cdn.discordapp.com/attachments/634555966234296321/634556080571023423/mikael-gustafsson-wallpaper-mikael-gustafsson.png); /* Change the background */
     --blur: 0px !important; /* Adjust the amount of blur on the background */
-    --opacitybg: 0.3 !important; /* Change the transparency of the background. This is what controls the black overlay that is over the background */
+    --opacitybg: 0.5 !important; /* Change the transparency of the background. This is what controls the black overlay that is over the background */
     --opacityDiscord: 0.7 !important; /* Try removing your custom background and enable Transparency in BandagedBD settings. Also adjust opacitybg to 0 */
-    --bgscale: 1; /* 0.3 to 3 */
-    --bgrotation: 0deg; /* This option works out for some backgrounds, just in case. */
+    --bgscale: 1; /* Size of background (0.3 to 3) */
+    --bgrotation: 0deg; /* Rotate background */
     --bgrepeat: no-repeat; /* To make the background not repeat, use "no-repeat". To make background repeat, use "repeat", changing bgscale might need to be adjusted */
 
     /* Guild Settings */
-    --foldericon: url();
-    --foldercolor: rgba(44,47,51,1) !important;
+    --homeicon: ; /* Coming Soon! */
+    --homeiconcolor: ; /* Coming Soon! */
+    --foldericon: url(); /* Coming Soon! */
+    --foldercolor: rgba(44,47,51,1) !important; /* Changes the background color of folders. */
+    --guildsize: ; /* Coming Soon! */
 
     /* Channel Settings */
     --category: #b9bbbe; /* Discord Default #b9bbbe */
@@ -27,8 +33,13 @@
     --channelmute: rgba(185,187,190,.6) !important; /* Discord Default rgba(185,187,190,.9) */
 
     /* Chat Settings */
+    --primarytextcolor: ; /* Coming Soon! */
+    --chatbubble: ; /* Coming Soon! */
+    --chatbubblecolor: ; /* Coming Soon! */
 
     /* Member Settings */
+    --rolecolor: ; /* Coming Soon! */
+    --circlestatus: ; /* Coming Soon! */
 
     /* Scrollbar Settings */
     --barcolor: white !important; /* Change the color of the scrollbar */
@@ -152,9 +163,9 @@ svg.circleIcon-LvPL6c {
 .guildSeparator-3s64Iy {
     display: none;
 }
-/* Scroller */
-.wrapper-1Rf91z {
-    width: 72px;
+/* Scroller 1 */
+/*.wrapper-1Rf91z {
+    width: 90px;
 }
 .wrapper-1Rf91z ::-webkit-scrollbar-thumb {
     visibility:hidden;
@@ -163,18 +174,22 @@ svg.circleIcon-LvPL6c {
 .wrapper-1Rf91z:hover ::-webkit-scrollbar-thumb {
     visibility:visible;
     background-color: var(--barcolor);
-}
-/** Channel Sidebar **/
-/* Background */
-.container-PNkimc {
-    background-color: transparent;
-}
-.panels-j1Uci_ {
-    background-color: transparent;
+}*/
+/* Scroller 2 */
+/*.wrapper-1Rf91z {
+    width: 92px;
+    position: absolute;
+    padding-right: 4px;
 }
 .sidebar-2K8pFh {
-    background-color: transparent;
+    margin-left: 21px;
 }
+.expandedFolderBackground-2sPsd- {
+      margin-left: 10px;
+}
+.wrapper-25eVIn {
+     margin-left: 23px;
+}*/
 /* Top */
 .header-2o-2hj {
 
