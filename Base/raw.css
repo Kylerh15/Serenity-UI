@@ -287,16 +287,32 @@ button.button-14-BFJ.enabled-2cQ-u7.button-38aScr.lookBlank-3eh9lL.colorBrand-3p
 .chat-3bRxxu {
     background: transparent;
 }
-/* Bad Code *
-.vertical-V37hAW {
-    height: 52px;
-}
-.note-1V3kyJ {
-    transform: translateY(17px);
-}
-.channelTextArea-rNsIhG {
-    transform: translateY(-17px);
-}
+/* Text Area */
+.channel-text-area-default, div[class*="channelTextArea-"] {
+    border-top: $border-bottom-row !important;
+    margin: 0;
+    padding-top: 0;
+  }
+  
+  .theme-dark div[class*="channelTextAreaEnabled-"] div[class*="inner-"],
+  div[class*="channelTextArea-"] div[class*="inner-"], div[class*="channelTextAreaEnabledNoAttach"],
+  .theme-dark div[class*="channelTextAreaDisabled-"] div[class*="innerDisabled-"] {
+    background-color: var(--dark-secondary);
+    border-radius: 0;
+    margin-bottom: 0;
+    padding-bottom: 4px;
+    padding-top: 4px;
+  
+    button[class*="attachButton-"] { height: 24px; }
+    button[class*="emojiButton"] {
+      &:hover { background: transparent; }
+    }
+  }
+  
+  div[class*="channelTextAreaEnabledNoAttach"] {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 /* Stupid Lines */
 .dividerEnabled-2TTlcf {
     border-bottom-color: transparent;
@@ -329,10 +345,6 @@ span.dividerContent-2L12VI {
 }
 .scrollbarGhostHairline-1mSOM1::-webkit-scrollbar-thumb {
     background-color: var(--barcolor);
-}
-/* Bottem */
-/*.form-2fGMdU {
-    transform: translateY(25px);
 }
 /* Dark themed emoji picker */
 .emojiPicker-3m1S-j, .category-2U57w6{
