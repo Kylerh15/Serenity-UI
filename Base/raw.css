@@ -189,6 +189,18 @@ svg.circleIcon-LvPL6c {
 .wrapper-25eVIn {
      margin-left: 23px;
 }*/
+.folder-21wGz3 {
+    background-color: transparent;
+}
+.wrapper-25eVIn {
+    background-color: transparent;
+}
+.closedFolderIconWrapper-15K9MK {
+    background-color: transparent;
+}
+.expandedFolderBackground-2sPsd- {
+    background-color: transparent;
+}
 
 /* - Channel Sidebar - */
 /* Background */
@@ -321,9 +333,10 @@ button.button-14-BFJ.enabled-2cQ-u7.button-38aScr.lookBlank-3eh9lL.colorBrand-3p
 .theme-dark div[class*="channelTextAreaEnabled-"] div[class*="inner-"],
 div[class*="channelTextArea-"] div[class*="inner-"], div[class*="channelTextAreaEnabledNoAttach"],
 .theme-dark div[class*="channelTextAreaDisabled-"] div[class*="innerDisabled-"] {
+    background-color: transparent;
     border-radius: 0;
     margin-bottom: 0;
-    padding-bottom: 4px;
+    padding-bottom: 5px;
     padding-top: 4px;
 }
 div[class*="channelTextAreaEnabledNoAttach"] {
